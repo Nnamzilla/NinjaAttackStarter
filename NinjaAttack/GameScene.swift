@@ -36,6 +36,8 @@ struct PhysicsCategory {
 }
 
 
+
+
 func +(left: CGPoint, right: CGPoint) -> CGPoint {
   return CGPoint(x: left.x + right.x, y: left.y + right.y)
 }
@@ -71,9 +73,11 @@ extension CGPoint {
 
 class GameScene: SKScene {
   
-  let player = SKSpriteNode(imageNamed: "player")
+  let player = SKSpriteNode(imageNamed: "Ken")
   
   var monstersDestroyed = 0
+  
+  let scoreLabel = SKLabelNode(fontNamed: "Arial")
 
   
   
@@ -95,7 +99,7 @@ class GameScene: SKScene {
         ])
     ))
     
-    let backgroundMusic = SKAudioNode(fileNamed: "background-music-aac.caf")
+    let backgroundMusic = SKAudioNode(fileNamed: "Street Fighter II Arcade - Ryu Stage.mp3")
     backgroundMusic.autoplayLooped = true
     addChild(backgroundMusic)
 
@@ -113,7 +117,7 @@ class GameScene: SKScene {
   func addMonster() {
     
     // Create sprite
-    let monster = SKSpriteNode(imageNamed: "monster")
+    let monster = SKSpriteNode(imageNamed: "Sagat")
     
     
     // Determine where to spawn the monster along the Y axis
@@ -153,13 +157,13 @@ class GameScene: SKScene {
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     // 1 - Choose one of the touches to work with
     guard let touch = touches.first else {
-      run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
+      run(SKAction.playSoundFileNamed("hadouken.mp3", waitForCompletion: false))
       return
     }
     let touchLocation = touch.location(in: self)
     
     // 2 - Set up initial location of projectile
-    let projectile = SKSpriteNode(imageNamed: "projectile")
+    let projectile = SKSpriteNode(imageNamed: "Hadou")
     projectile.position = player.position
     
     
@@ -204,6 +208,11 @@ class GameScene: SKScene {
     monster.removeFromParent()
     
     monstersDestroyed += 1
+    scoreLabel.text = "Hadous Landed: \(monstersDestroyed)"
+    if monstersDestroyed >= 5
+    {
+      addMonster()
+    }
     if monstersDestroyed > 30 {
       let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
       let gameOverScene = GameOverScene(size: self.size, won: true)
