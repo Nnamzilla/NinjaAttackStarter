@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530232B522516C180091BF2C /* 09. Ryu Stage.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 530232B422516C180091BF2C /* 09. Ryu Stage.mp3 */; };
 		5342658E224D6A23008248C6 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5342658D224D6A23008248C6 /* GameOverScene.swift */; };
-		53720DF4224E55B7002B105C /* Street Fighter II Arcade - Ryu Stage.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 53720DF3224E55B7002B105C /* Street Fighter II Arcade - Ryu Stage.mp3 */; };
 		53720DF6224E589C002B105C /* hadouken.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 53720DF5224E589C002B105C /* hadouken.mp3 */; };
 		5C2901831F8F6DE700803663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */; };
 		AFD63F872036493600E08C66 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD63F862036493600E08C66 /* GameViewController.swift */; };
@@ -21,8 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		530232B422516C180091BF2C /* 09. Ryu Stage.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "09. Ryu Stage.mp3"; path = "../../../../Downloads/09. Ryu Stage.mp3"; sourceTree = "<group>"; };
 		5342658D224D6A23008248C6 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameOverScene.swift; path = NinjaAttack/GameOverScene.swift; sourceTree = "<group>"; };
-		53720DF3224E55B7002B105C /* Street Fighter II Arcade - Ryu Stage.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Street Fighter II Arcade - Ryu Stage.mp3"; path = "../../../../Downloads/Street Fighter II Arcade - Ryu Stage.mp3"; sourceTree = "<group>"; };
 		53720DF5224E589C002B105C /* hadouken.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hadouken.mp3; path = ../../../../Downloads/hadouken.mp3; sourceTree = "<group>"; };
 		5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = NinjaAttack/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFD63F862036493600E08C66 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = NinjaAttack/GameViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 			children = (
 				AFD63F8D203649F800E08C66 /* background-music-aac.caf */,
 				53720DF5224E589C002B105C /* hadouken.mp3 */,
-				53720DF3224E55B7002B105C /* Street Fighter II Arcade - Ryu Stage.mp3 */,
+				530232B422516C180091BF2C /* 09. Ryu Stage.mp3 */,
 				AFD63F8E203649F800E08C66 /* pew-pew-lei.caf */,
 			);
 			name = Sounds;
@@ -155,12 +155,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFD63F8F203649F800E08C66 /* background-music-aac.caf in Resources */,
-				53720DF4224E55B7002B105C /* Street Fighter II Arcade - Ryu Stage.mp3 in Resources */,
 				D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */,
 				53720DF6224E589C002B105C /* hadouken.mp3 in Resources */,
 				5C2901831F8F6DE700803663 /* LaunchScreen.storyboard in Resources */,
 				AFD63F90203649F800E08C66 /* pew-pew-lei.caf in Resources */,
 				D2A5F2091F4A9144005CD714 /* Main.storyboard in Resources */,
+				530232B522516C180091BF2C /* 09. Ryu Stage.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

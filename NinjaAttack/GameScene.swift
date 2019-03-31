@@ -99,10 +99,16 @@ class GameScene: SKScene {
         ])
     ))
     
-    let backgroundMusic = SKAudioNode(fileNamed: "Street Fighter II Arcade - Ryu Stage.mp3")
+    let backgroundMusic = SKAudioNode(fileNamed: "09. Ryu Stage.mp3")
     backgroundMusic.autoplayLooped = true
     addChild(backgroundMusic)
-
+    
+    // Display count of enemies defeated
+    scoreLabel.text = "Phantom Sagats Defeated: \(monstersDestroyed)"
+    scoreLabel.fontSize = 15
+    scoreLabel.fontColor = SKColor.black
+    scoreLabel.position = CGPoint(x: size.width * 0.2, y: size.height * 0.1)
+    addChild(scoreLabel)
 
   }
   
@@ -208,12 +214,12 @@ class GameScene: SKScene {
     monster.removeFromParent()
     
     monstersDestroyed += 1
-    scoreLabel.text = "Hadous Landed: \(monstersDestroyed)"
-    if monstersDestroyed >= 5
+    scoreLabel.text = "Phantom Sagats Defeated: \(monstersDestroyed)"
+    if monstersDestroyed >= 7
     {
       addMonster()
     }
-    if monstersDestroyed > 30 {
+    if monstersDestroyed > 25 {
       let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
       let gameOverScene = GameOverScene(size: self.size, won: true)
       view?.presentScene(gameOverScene, transition: reveal)
